@@ -6,6 +6,7 @@ package semana5;
 
 import exceptions.ValorNumericoInvalidoException;
 import exceptions.ValorStringInvalida;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,6 +14,17 @@ import exceptions.ValorStringInvalida;
  * 
  */
 public class Paiis {
+    
+    
+    private String linguaFalada;
+    private Integer numeroPopulacao;
+    private String presidenteRei;
+    private String nomePrimeiroMinistro;
+    private Integer valorPIB;
+    private String nome;
+    private String continente;
+    private ArrayList<Cidade> cidades = new ArrayList<>();
+    
 
     public Paiis(String linguaFalada, int numeroPopulacao, String presidenteRei, String nomePrimeiroMinistro, int valorPIB, String nome, String continente) {
         this.linguaFalada = linguaFalada;
@@ -24,6 +36,99 @@ public class Paiis {
         this.continente = continente;
         
     }
+    
+    public void addCidade(Cidade cidade) {
+        cidades.add(cidade);
+    }
+    
+    public void removeCidade(Cidade cidade) {
+        try {
+            cidades.remove(cidade);
+            
+        } catch (Exception e) {
+            System.out.println("Erro: " + e);
+        }
+    }
+    
+    public void substituiCidade(Integer pos, Cidade cidade){
+        cidades.set(pos, cidade);
+    }
+    
+    public Integer populacaoTotal(){
+        
+        Integer total = 0;
+        for (Cidade cidade : cidades) {
+            
+            total = total + cidade.getNumeroPolulacao();
+        }
+        return total;
+    }
+    
+    public Float mediaPopulacaoPorCidade(){
+        
+        Integer total = 0;
+        for (Cidade cidade : cidades) {
+            
+            total = total + cidade.getNumeroPolulacao();
+        }
+        return (float)total / cidades.size();
+    }
+    
+    public String cidadeMaisPopulosa(){
+        
+        Integer populacao = 0;
+        Integer pos = 0;
+        for (int i = 0; i < cidades.size(); i++) {
+            
+            if (cidades.get(i).getNumeroPolulacao() > populacao ) {
+                populacao = cidades.get(i).getNumeroPolulacao();
+                pos = i;
+            }
+        }
+        return cidades.get(pos).getNome();
+    }
+    
+    public String cidadeMenosPopulosa(){
+        
+        Integer populacao = cidades.get(0).getNumeroPolulacao();
+        Integer pos = 0;
+        for (int i = 0; i < cidades.size(); i++) {
+            
+            if (cidades.get(i).getNumeroPolulacao() < populacao ) {
+                populacao = cidades.get(i).getNumeroPolulacao();
+                pos = i;
+            }
+        }
+        return cidades.get(pos).getNome();
+    }
+    
+    public String cidadeAtravessadaMaisRios(){
+        
+        Integer numeroRios = 0;
+        Integer pos = 0;
+        for (int i = 0; i < cidades.size(); i++) {
+            
+            if (cidades.get(i).getNomeDosRios().size() > numeroRios ) {
+                numeroRios = cidades.get(i).getNomeDosRios().size();
+                pos = i;
+            }
+        }
+        return cidades.get(pos).getNome();
+    }
+    
+    public Boolean paiisTemCostaMaritima() {
+        
+        Boolean temCostaMaritima = false;
+        
+        for (int i = 0; i < cidades.size(); i++) {
+            if (cidades.get(i).getTemCostamaritima() == true) {
+                temCostaMaritima = true;
+            }
+        }
+        
+        return temCostaMaritima;
+    }
+    
 
     @Override
     public String toString() {
@@ -96,14 +201,6 @@ public class Paiis {
         this.linguaFalada = linguaFalada;
     }
     
-    private String linguaFalada;
-    private Integer numeroPopulacao;
-    private String presidenteRei;
-    private String nomePrimeiroMinistro;
-    private Integer valorPIB;
-    private String nome;
-    private String continente;
-
     public Integer getRendimentoPerCapita(){
         return this.getValorPIB() / this.getNumeroPopulacao();
     }
