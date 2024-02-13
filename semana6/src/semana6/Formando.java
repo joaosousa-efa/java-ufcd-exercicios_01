@@ -11,7 +11,7 @@ package semana6;
 public class Formando {
     
     private String nome = "";
-    private double numero = 0;
+    private int numero = 0;
     private double notaUFDC = 0;
     
     public static int contador = 1;
@@ -33,11 +33,11 @@ public class Formando {
         this.nome = nome;
     }
 
-    public double getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(double Numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 

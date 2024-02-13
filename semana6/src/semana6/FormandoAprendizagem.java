@@ -14,7 +14,7 @@ public class FormandoAprendizagem extends FormandoEFA{
 
     @Override
     public String toString() {
-        return "FormandoAprendizagem {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ","+ "NotaPAF=" + NotaPAF + '}';
+        return "FormandoAprendizagem {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ", NotaPAF=" + NotaPAF + '}';
     }
     
     public double getNotaPAF() {

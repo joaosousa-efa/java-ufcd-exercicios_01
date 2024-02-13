@@ -10,19 +10,19 @@ package semana5_heranca;
  */
 public class FormandoAprendizagem extends FormandoEFA{
     
-    private double NotaPAF = 0;
+    private double notaPAF = 0;
 
     @Override
     public String toString() {
-        return "FormandoAprendizagem {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ","+ "NotaPAF=" + NotaPAF + '}';
+        return "FormandoAprendizagem {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ", NotaPAF=" + notaPAF + '}';
     }
     
     public double getNotaPAF() {
-        return NotaPAF;
+        return notaPAF;
     }
 
-    public void setNotaPAF(double NotaPAF) {
-        this.NotaPAF = NotaPAF;
+    public void setNotaPAF(double notaPAF) {
+        this.notaPAF = notaPAF;
     }
 
     @Override

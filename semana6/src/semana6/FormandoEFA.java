@@ -14,7 +14,7 @@ public class FormandoEFA extends Formando{
 
     @Override
     public String toString() {
-        return "FormandoEFA {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + "," + "NotaPra=" + NotaPra + '}';
+        return "FormandoEFA {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ", NotaPra=" + NotaPra + '}';
     }
 
     

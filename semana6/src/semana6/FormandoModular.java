@@ -12,7 +12,7 @@ public class FormandoModular extends Formando {
  
     @Override
     public String toString() {
-        return "FormandoModular {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ","+ "NotaUFCD=" + this.getNotaUFDC() + '}';
+        return "FormandoModular {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ", NotaUFCD=" + this.getNotaUFDC() + '}';
     }
     
     @Override

@@ -10,37 +10,37 @@ package semana5_heranca;
  */
 public class Formando {
     
-    private String Nome = "";
-    private double Numero = 0;
-    private double NotaUFDC = 0;
+    private String nome = "";
+    private int numero = 0;
+    private double notaUFDC = 0;
 
     @Override
     public String toString() {
-        return "Formando {" + "Nome=" + Nome + ", Numero=" + Numero + ", NotaUFDC=" + NotaUFDC + '}';
+        return "Formando {" + "Nome=" + nome + ", Numero=" + numero + ", NotaUFDC=" + notaUFDC + '}';
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public double getNumero() {
-        return Numero;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setNumero(double Numero) {
-        this.Numero = Numero;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     public double getNotaUFDC() {
-        return NotaUFDC;
+        return notaUFDC;
     }
 
-    public void setNotaUFDC(double NotaUFDC) {
-        this.NotaUFDC = NotaUFDC;
+    public void setNotaUFDC(double notaUFDC) {
+        this.notaUFDC = notaUFDC;
     }
 
     public Formando() {

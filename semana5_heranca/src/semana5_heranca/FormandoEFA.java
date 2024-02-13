@@ -10,21 +10,21 @@ package semana5_heranca;
  */
 public class FormandoEFA extends Formando{
     
-    private double NotaPra = 0;
+    private double notaPra = 0;
 
     @Override
     public String toString() {
-        return "FormandoEFA {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + "," + "NotaPra=" + NotaPra + '}';
+        return "FormandoEFA {" + "Nome=" + this.getNome() + ", Numero=" + this.getNumero() + ", NotaPra=" + notaPra + '}';
     }
 
     
     
     public double getNotaPra() {
-        return NotaPra;
+        return notaPra;
     }
 
-    public void setNotaPra(double NotaPra) {
-        this.NotaPra = NotaPra;
+    public void setNotaPra(double notaPra) {
+        this.notaPra = notaPra;
     }
     
     @Override
